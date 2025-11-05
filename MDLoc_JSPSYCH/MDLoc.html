@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MDN Localizer</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <script src="jspsych/jspsych.js"></script>
+    <script src="jspsych/plugin-preload.js"></script>
+    <script src="jspsych/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/plugin-survey-html-form.js"></script>
+    <script src="jspsych/plugin-instructions.js"></script>
+    <script src="jspsych/plugin-fullscreen.js"></script>
+    <script src="jspsych/plugin-html-button-response.js"></script>
+    <script src="jspsych/plugin-browser-check.js"></script>
+    <script src="jspsych/plugin-call-function.js"></script>
+    
+    <!-- MD Localizer Plugin -->
+    <script src="jspsych/plugin-md-localizer.js"></script>
+    
+    <link href="custom.css" rel="stylesheet" type="text/css">
+    
+    <script>
+        window.onerror = function(message, source, lineno, colno, error) {
+            console.error("Fehler aufgetreten:", message, "bei", source, ":", lineno);
+            alert("Ein Fehler ist aufgetreten. Bitte prüfen Sie die Konsole für weitere Informationen.");
+        };
+        
+        let participantId = "unknown";
+
+        // Initialize jsPsych 
+        const jsPsych = initJsPsych({
+            override_safe_mode: true,
+            on_finish: function() {
+                console.log("Experiment beendet");
+                
+                const timestamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\..+/, "");
+                const filename = `md_localizer_${participantId}_${timestamp}.csv`;
+                
+                jsPsych.data.get().localSave('csv', filename);
+                jsPsych.data.displayData();
+            },
+            on_close: function() {
+                console.log("Experiment vorzeitig geschlossen");
+                
+                const timestamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\..+/, "");
+                const filename = `md_localizer_${participantId}_${timestamp}_unvollstaendig.csv`;
+                
+                jsPsych.data.get().localSave('csv', filename);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="experiment-container">
+        Falls Sie diese Nachricht sehen, wurde das Experiment nicht korrekt geladen.
+    </div>
+</body>
+
+<!-- EXPERIMENT SCRIPT -->
+<script src="md_localizer.js"></script>
+</html>
+

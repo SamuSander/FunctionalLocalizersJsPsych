@@ -1,0 +1,83 @@
+<!-- speeded_langloc.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Speeded Language Localizer</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <script src="jspsych/jspsych.js"></script>
+    <script src="jspsych/plugin-preload.js"></script>
+    <script src="jspsych/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/plugin-survey-html-form.js"></script>
+    <script src="jspsych/plugin-instructions.js"></script>
+    <script src="jspsych/plugin-fullscreen.js"></script>
+    <script src="jspsych/plugin-html-button-response.js"></script>
+    <script src="jspsych/plugin-browser-check.js"></script>
+    <script src="jspsych/plugin-call-function.js"></script>
+    
+    <link href="custom.css" rel="stylesheet" type="text/css">
+
+    <script>
+        window.onerror = function(message, source, lineno, colno, error) {
+            console.error("An error occurred:", message, "at", source, ":", lineno);
+            alert("An error occurred. Please check the console for more information.");
+        };
+        
+
+        let participantId = "unknown";
+
+        // Initialize jsPsych 
+        const jsPsych = initJsPsych({
+            override_safe_mode: true,
+            on_finish: function() {
+            console.log("Experiment finished");
+            
+            const timestamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\..+/, "");
+            
+            // Hole Run und Set aus den jsPsych Daten
+            const allData = jsPsych.data.get();
+            const run = allData.select('run').values[0] || 'unknown';
+            const set = allData.select('set').values[0] || 'unknown';
+            
+            const filename = `lang_loc_${participantId}_run${run}_set${set}_${timestamp}.csv`;
+            
+            jsPsych.data.get().localSave('csv', filename);
+            jsPsych.data.displayData();
+        },
+            on_close: function() {
+                console.log("Experiment closed early");
+                
+                // Use the global Variable 
+                const timestamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\..+/, "");
+                const filename = `lang_loc_${participantId}_${timestamp}_incomplete.csv`;
+                
+                jsPsych.data.get().localSave('csv', filename);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="experiment-container">
+        If you see this message, the experiment has not loaded properly.
+    </div>
+</body>
+
+<!-- STIMS ENGLISH -->
+
+<!-- RUN 1 -->
+<script src="stim_english/speeded_langloc_stimuli_run1_set1.js"></script>
+<script src="stim_english/speeded_langloc_stimuli_run1_set2.js"></script>
+<script src="stim_english/speeded_langloc_stimuli_run1_set3.js"></script>
+<script src="stim_english/speeded_langloc_stimuli_run1_set4.js"></script>
+<script src="stim_english/speeded_langloc_stimuli_run1_set5.js"></script>
+
+<!-- RUN 2 -->
+<script src="stim_english/speeded_langloc_stimuli_run2_set1.js"></script>
+<script src="stim_english/speeded_langloc_stimuli_run2_set2.js"></script>
+<script src="stim_english/speeded_langloc_stimuli_run2_set3.js"></script>
+<script src="stim_english/speeded_langloc_stimuli_run2_set4.js"></script>
+<script src="stim_english/speeded_langloc_stimuli_run2_set5.js"></script>
+
+<!-- RUN EXPERIMENT -->
+<script src="speeded_langloc.js"></script>
+</html>
