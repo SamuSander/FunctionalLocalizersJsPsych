@@ -90,11 +90,12 @@ FunctionalLocalizersJsPsych/
 
 ## Demo videos
 
-**MD Network Localizer** <video src="videos/MDNLocalizer.mp4" controls title="MDN Localizer demo" style="max-width:100%;"></video>
+**MD Network Localizer**
+- [▶ MD Network Localizer (MP4)](videos/MDNLocalizer.mp4?raw=1)
 
-**Speeded Language Localizer** <video src="videos/SpeededLanguageLocalizer.mp4" controls title="Speeded Language Localizer demo" style="max-width:100%;"></video>
+**Speeded Language Localizer**
 
-> If GitHub does not render inline playback, click the videos to download or open them locally.
+- [▶ Speeded Language Localizer (MP4)](videos/SpeededLanguageLocalizer.mp4)
 
 ---
 
