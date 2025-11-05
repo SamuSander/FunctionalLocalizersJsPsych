@@ -373,7 +373,7 @@ function createWordSequenceTrial(trialData, trialIndex) {
                     <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
                         <img src="images/hand-press-button-4.png" 
                             style="max-width: 80%; max-height: 80%; object-fit: contain;" 
-                            alt="Taste drücken">
+                            alt="Press the button">
                     </div>
                 `,
                 choices: KEY_RESPONSE,
@@ -494,8 +494,8 @@ var firstTrigger = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
         <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
-            <p style="font-size:26px; text-align: center;">Bitte informieren Sie jetzt den Versuchsleiter.</p>
-            <p style="font-size:26px; text-align: center;">Das Experiment beginnt, sobald der Scanner bereit ist.</p>
+            <p style="font-size:26px; text-align: center;">Please inform the experimenter now.</p>
+            <p style="font-size:26px; text-align: center;">The experiment will begin as soon as the scanner is ready.</p>
             <p style="font-size:60px; margin-top: 40px;">+</p>
         </div>
     `,
@@ -529,7 +529,7 @@ var collectTriggers = {
     stimulus: function() {
         return `
             <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
-                <p style="font-size:22px; text-align: center;">Warte auf Scanner-Trigger... (${triggersToCollect - triggerCount} noch benötigt)</p>
+                <p style="font-size:22px; text-align: center;">Waiting for scanner triggers... (${triggersToCollect - triggerCount} still needed)</p>
                 <p style="font-size:60px; margin-top: 40px;">+</p>
             </div>
         `;
@@ -592,11 +592,11 @@ var enterFullscreen = {
     fullscreen_mode: true,
     message: `
         <div style="font-size: 24px; line-height: 1.5; max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>Das Experiment wird im Vollbildmodus durchgeführt.</p>
-            <p>Drücken Sie auf die Schaltfläche, um den Vollbildmodus zu aktivieren und das Experiment zu starten.</p>
+            <p>The experiment will run in fullscreen mode.</p>
+            <p>Click the button to enable fullscreen and start the experiment.</p>
         </div>
     `,
-    button_label: 'Vollbild aktivieren',
+    button_label: 'Enable Fullscreen',
     data: {
         trial_type: 'fullscreen_enter'
     }
@@ -606,11 +606,11 @@ var welcome = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
         <div style="max-width: 1000px; margin: 0 auto; padding: 40px; text-align: center;">
-            <h1 style="font-size: 48px; margin-bottom: 40px;">Willkommen zum Sprach-Lokalisierer</h1>
-            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px;">In diesem Experiment werden Sie Sequenzen von Wörtern oder Nichtwörtern sehen.</p>
-            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px;">Ihre Aufgabe ist es, jede Sequenz aufmerksam zu lesen und eine Taste zu drücken, wenn Sie dazu aufgefordert werden.</p>
-            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px;">Bitte bleiben Sie konzentriert und reagieren Sie schnell, wenn Sie die Tasten-Aufforderung sehen.</p>
-            <p style="font-size: 28px; line-height: 1.5; margin-top: 50px;">Drücken Sie eine beliebige Taste, um fortzufahren.</p>
+            <h1 style="font-size: 48px; margin-bottom: 40px;">Welcome to the Language Localizer</h1>
+            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px;">In this experiment, you will see sequences of words or nonwords.</p>
+            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px;">Your task is to read each sequence attentively and press a button when prompted.</p>
+            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px;">Please stay focused and respond quickly when you see the button prompt.</p>
+            <p style="font-size: 28px; line-height: 1.5; margin-top: 50px;">Press any key to continue.</p>
         </div>
     `,
     choices: KEY_RESPONSE,
@@ -624,37 +624,37 @@ var instructions = {
     pages: [
         `
         <div style="max-width: 1000px; margin: 0 auto; padding: 40px;">
-            <h2 style="font-size: 36px; margin-bottom: 30px;">Experimentanleitung</h2>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Während dieses Experiments werden Sie Sequenzen von 12 Wörtern oder Nichtwörtern sehen.</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Jedes Wort wird für 200 ms angezeigt (sehr kurz).</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Nach jeder Sequenz sehen Sie eine Tasten-Aufforderung <img src="images/hand-press-button-4.png" style="height: 40px; vertical-align: middle; margin: 0 5px;" alt="button">.</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 30px;"><strong>Wenn Sie die Tasten-Aufforderung <img src="images/hand-press-button-4.png" style="height: 40px; vertical-align: middle; margin: 0 5px;" alt="button"> sehen, drücken Sie so schnell wie möglich eine der Scanner-Tasten.</strong></p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Das Experiment besteht aus ${TOTAL_TRIALS} Durchgängen, die in ${TOTAL_BLOCKS} Blöcke organisiert sind.</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Zwischen einigen Blöcken gibt es Ruhephasen mit einem Fixationskreuz (+).</p>
+            <h2 style="font-size: 36px; margin-bottom: 30px;">Instructions</h2>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">During this experiment, you will see sequences of 12 words or nonwords.</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Each word is shown for 200 ms (very brief).</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">After each sequence, you will see a button prompt <img src="images/hand-press-button-4.png" style="height: 40px; vertical-align: middle; margin: 0 5px;" alt="button">.</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 30px;"><strong>When you see the button prompt <img src="images/hand-press-button-4.png" style="height: 40px; vertical-align: middle; margin: 0 5px;" alt="button">, press one of the scanner keys as quickly as you can.</strong></p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">The experiment consists of ${TOTAL_TRIALS} trials organized into ${TOTAL_BLOCKS} blocks.</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Between some blocks there are rest periods with a fixation cross (+).</p>
         </div>
         `,
         `
         <div style="max-width: 1000px; margin: 0 auto; padding: 40px;">
-            <h2 style="font-size: 36px; margin-bottom: 30px;">Ihre Aufgabe</h2>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">1. <strong>Lesen Sie jede Sequenz aufmerksam</strong> - versuchen Sie, zu folgen, auch wenn die Wörter schnell präsentiert werden</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">2. <strong>Drücken Sie eine Taste bei Aufforderung <img src="images/hand-press-button-4.png" style="height: 35px; vertical-align: middle; margin: 0 5px;" alt="button"></strong> - dies hilft uns sicherzustellen, dass Sie aufmerksam sind</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">3. <strong>Bleiben Sie ruhig und konzentriert</strong> während des gesamten Experiments</p>
-            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px; color: #2196F3;">Machen Sie sich keine Sorgen, wenn die Sequenzen schnell erscheinen - tun Sie einfach Ihr Bestes!</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Das gesamte Experiment dauert etwa 3,5 Minuten.</p>
+            <h2 style="font-size: 36px; margin-bottom: 30px;">Your Task</h2>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">1. <strong>Read each sequence carefully</strong> — try to follow even though the words are presented quickly</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">2. <strong>Press a key when prompted <img src="images/hand-press-button-4.png" style="height: 35px; vertical-align: middle; margin: 0 5px;" alt="button"></strong> — this helps us ensure you are attentive</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">3. <strong>Stay calm and focused</strong> throughout the experiment</p>
+            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px; color: #2196F3;">Don’t worry if the sequences feel fast — just do your best!</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">The entire experiment takes about 3.5 minutes.</p>
         </div>
         `,
         `
         <div style="max-width: 1000px; margin: 0 auto; padding: 40px;">
-            <h2 style="font-size: 36px; margin-bottom: 30px;">Bereit zum Start</h2>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Nach diesen Anweisungen beginnt das Experiment, sobald der Scanner bereit ist.</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Sie sehen zuerst ein Fixationskreuz (+), dann die Scanner-Trigger, dann die erste Wortsequenz.</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Denken Sie daran:</p>
+            <h2 style="font-size: 36px; margin-bottom: 30px;">Ready to Start</h2>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">After these instructions, the experiment will begin as soon as the scanner is ready.</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">You will first see a fixation cross (+), then the scanner triggers, then the first word sequence.</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Remember:</p>
             <ul style="font-size: 24px; line-height: 1.5; text-align: left; margin-bottom: 30px;">
-                <li>Bleiben Sie ruhig und konzentriert</li>
-                <li>Lesen Sie jede Wortsequenz</li>
-                <li>Drücken Sie schnell eine Taste, wenn Sie die Tasten-Aufforderung <img src="images/hand-press-button-4.png" style="height: 30px; vertical-align: middle; margin: 0 5px;" alt="button"> sehen</li>
+                <li>Stay calm and focused</li>
+                <li>Read each word sequence</li>
+                <li>Press a key quickly when you see the button prompt <img src="images/hand-press-button-4.png" style="height: 30px; vertical-align: middle; margin: 0 5px;" alt="button"></li>
             </ul>
-            <p style="font-size: 28px; line-height: 1.5; margin-top: 30px; color: #4CAF50;"><strong>Drücken Sie eine beliebige Taste, wenn Sie bereit sind!</strong></p>
+            <p style="font-size: 28px; line-height: 1.5; margin-top: 30px; color: #4CAF50;"><strong>Press any key when you are ready!</strong></p>
         </div>
         `
     ],
@@ -670,11 +670,11 @@ var experimentEndInstructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
         <div style="max-width: 1000px; margin: 0 auto; padding: 40px; text-align: center;">
-            <h2 style="font-size: 42px; margin-bottom: 40px;">Experiment Abgeschlossen</h2>
-            <p style="font-size: 32px; line-height: 1.5; margin-bottom: 30px;">Sie haben den Sprach-Lokalisierer erfolgreich abgeschlossen!</p>
-            <p style="font-size: 32px; line-height: 1.5; margin-bottom: 30px; color: #4CAF50;"><strong>Vielen Dank für Ihre Teilnahme!</strong></p>
-            <p style="font-size: 32px; line-height: 1.5; margin-bottom: 30px;">Bitte bleiben Sie ruhig liegen, bis der Versuchsleiter zu Ihnen kommt.</p>
-            <p style="font-size: 32px; line-height: 1.5; margin-top: 50px;">Drücken Sie eine beliebige Taste zum Beenden.</p>
+            <h2 style="font-size: 42px; margin-bottom: 40px;">Experiment complete</h2>
+            <p style="font-size: 32px; line-height: 1.5; margin-bottom: 30px;">You have successfully completed the Language Localizer!</p>
+            <p style="font-size: 32px; line-height: 1.5; margin-bottom: 30px; color: #4CAF50;"><strong>Thank you for your participation!</strong></p>
+            <p style="font-size: 32px; line-height: 1.5; margin-bottom: 30px;">Please remain still until the experimenter comes to you.</p>
+            <p style="font-size: 32px; line-height: 1.5; margin-top: 50px;">Press any key to end.</p>
         </div>
     `,
     choices: KEY_RESPONSE,
@@ -709,10 +709,10 @@ var sequenceLoadingTrial = {
     stimulus: function() {
         return `
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2>Lade Sprach-Lokalisierer Stimuli...</h2>
+                <h2>Loading Language Localizer stimuli...</h2>
                 <div style="font-size: 48px; margin: 20px 0;">⏳</div>
-                <p style="font-size: 18px; color: #666;">Teilnehmer ${currentParticipantId} - Durchgang ${currentRun}, Set ${currentSet}</p>
-                <p style="font-size: 18px; color: #666;">Bitte warten Sie einen Moment...</p>
+                <p style="font-size: 18px; color: #666;">Participant ${currentParticipantId} - Run ${currentRun}, Set ${currentSet}</p>
+                <p style="font-size: 18px; color: #666;">Please wait a moment...</p>
                 <div id="loading-status" style="margin-top: 20px; font-size: 14px; color: #999;"></div>
             </div>
         `;
@@ -728,7 +728,7 @@ var sequenceLoadingTrial = {
     on_load: function() {
         var statusDiv = document.getElementById('loading-status');
         if (statusDiv) {
-            statusDiv.innerHTML = "Lade Stimuli-Daten...";
+            statusDiv.innerHTML = "Loading stimulus data...";
         }
         
         // Initialize console logging
@@ -738,25 +738,25 @@ var sequenceLoadingTrial = {
         loadStimuliData(currentRun, currentSet)
             .then(function(stimuliData) {
                 if (statusDiv) {
-                    statusDiv.innerHTML = "Stimuli geladen. Erstelle Durchgänge...";
+                    statusDiv.innerHTML = "Stimuli loaded. Creating trials...";
                 }
                 
                 // Store stimuli globally
                 loadedStimuli = stimuliData;
                 
                 if (!stimuliData) {
-                    throw new Error("Keine Stimuli-Daten empfangen");
+                    throw new Error("No stimulus data received");
                 }
                 
                 if (statusDiv) {
-                    statusDiv.innerHTML = "Füge Durchgänge zur Timeline hinzu...";
+                    statusDiv.innerHTML = "Adding trials to the timeline...";
                 }
                 
                 // Build the rest of the timeline
                 buildRestOfTimeline();
                 
                 if (statusDiv) {
-                    statusDiv.innerHTML = `Stimuli für Durchgang ${currentRun}, Set ${currentSet} bereit.`;
+                    statusDiv.innerHTML = `Stimuli for run ${currentRun}, set ${currentSet} ready.`;
                 }
                 
                 // End this trial successfully after a short delay
@@ -775,12 +775,12 @@ var sequenceLoadingTrial = {
                 console.error("Error loading stimuli:", error);
                 
                 if (statusDiv) {
-                    statusDiv.innerHTML = `Fehler: ${error.message}`;
+                    statusDiv.innerHTML = `Error: ${error.message}`;
                 }
                 
                 // End trial with error after delay
                 setTimeout(function() {
-                    alert('Stimuli konnten nicht geladen werden. Experiment wird beendet.');
+                    alert('Stimuli could not be loaded. The experiment will end.');
                     jsPsych.finishTrial({
                         success: false,
                         error: error.message
@@ -864,24 +864,24 @@ function initializeExperiment() {
         type: jsPsychSurveyHtmlForm,
         html: `
             <div style="max-width: 600px; margin: 0 auto; color: white;">
-                <h2 style="text-align: center;">Schneller Sprach-Lokalisierer</h2>
-                <p style="text-align: center;">Bitte geben Sie Ihre Teilnehmer-ID ein:</p>
+                <h2 style="text-align: center;">Speeded Language Localizer</h2>
+                <p style="text-align: center;">Please enter your participant ID:</p>
                 <div style="margin: 20px 0;">
-                    <label for="participant_id" style="display: block; margin-bottom: 5px;">Teilnehmer-ID:</label>
+                    <label for="participant_id" style="display: block; margin-bottom: 5px;">Participant ID:</label>
                     <input type="text" id="participant_id" name="participant_id" required style="width: 100%; padding: 8px; font-size: 16px; color: black; background: white;">
                 </div>
                 <div style="margin: 20px 0;">
-                    <label for="run" style="display: block; margin-bottom: 5px;">Durchgang (1 oder 2):</label>
+                    <label for="run" style="display: block; margin-bottom: 5px;">Run (1 or 2):</label>
                     <select id="run" name="run" required style="width: 100%; padding: 8px; font-size: 16px; color: black; background: white;">
-                        <option value="">Durchgang wählen</option>
-                        <option value="1">Durchgang 1</option>
-                        <option value="2">Durchgang 2</option>
+                        <option value="">Select run</option>
+                        <option value="1">Run 1</option>
+                        <option value="2">Run 2</option>
                     </select>
                 </div>
                 <div style="margin: 20px 0;">
                     <label for="set" style="display: block; margin-bottom: 5px;">Set (1-5):</label>
                     <select id="set" name="set" required style="width: 100%; padding: 8px; font-size: 16px; color: black; background: white;">
-                        <option value="">Set wählen</option>
+                        <option value="">Select set</option>
                         <option value="1">Set 1</option>
                         <option value="2">Set 2</option>
                         <option value="3">Set 3</option>
@@ -891,7 +891,7 @@ function initializeExperiment() {
                 </div>
             </div>
         `,
-        button_label: 'Weiter',
+        button_label: 'Continue',
         data: {
             trial_type: 'participant_info'
         },

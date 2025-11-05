@@ -613,8 +613,8 @@ var firstTrigger = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
         <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
-            <p style="font-size:26px; text-align: center; color: white;">Bitte informieren Sie jetzt den Versuchsleiter.</p>
-            <p style="font-size:26px; text-align: center; color: white;">Das Experiment beginnt, sobald der Scanner bereit ist.</p>
+            <p style="font-size:26px; text-align: center; color: white;">Please inform the experimenter now.</p>
+            <p style="font-size:26px; text-align: center; color: white;">The experiment will begin as soon as the scanner is ready.</p>
             <p style="font-size:60px; margin-top: 40px; color: white; font-family: Arial, sans-serif;">+</p>
         </div>
     `,
@@ -648,7 +648,7 @@ var collectTriggers = {
     stimulus: function() {
         return `
             <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
-                <p style="font-size:22px; text-align: center; color: white;">Warte auf Scanner-Trigger... (${triggersToCollect - triggerCount} noch benötigt)</p>
+                <p style="font-size:22px; text-align: center; color: white;">Waiting for scanner triggers... (${triggersToCollect - triggerCount} still needed)</p>
                 <p style="font-size:60px; margin-top: 40px; color: white; font-family: Arial, sans-serif;">+</p>
             </div>
         `;
@@ -708,11 +708,11 @@ var enterFullscreen = {
     fullscreen_mode: true,
     message: `
         <div style="font-size: 24px; line-height: 1.5; max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>Das Experiment wird im Vollbildmodus durchgeführt.</p>
-            <p>Drücken Sie die Taste, um den Vollbildmodus zu aktivieren und das Experiment zu beginnen.</p>
+            <p>The experiment will run in fullscreen mode.</p>
+            <p>Press the button to enable fullscreen and begin the experiment.</p>
         </div>
     `,
-    button_label: 'Vollbild aktivieren',
+    button_label: 'Enable Fullscreen',
     data: {
         trial_type: 'fullscreen_enter'
     }
@@ -722,11 +722,11 @@ var welcome = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
         <div style="max-width: 1000px; margin: 0 auto; padding: 40px; text-align: center;">
-            <h1 style="font-size: 48px; margin-bottom: 40px;">Willkommen zum MD Localizer</h1>
-            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px;">In diesem Experiment sehen Sie Sequenzen von blauen Quadraten in einem Raster.</p>
-            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px;">Ihre Aufgabe ist es, die Sequenzen aufmerksam zu verfolgen und am Ende das korrekte Muster zu identifizieren.</p>
-            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px;">Bitte bleiben Sie während des gesamten Experiments konzentriert.</p>
-            <p style="font-size: 28px; line-height: 1.5; margin-top: 50px;">Drücken Sie eine beliebige Taste zum Fortfahren.</p>
+            <h1 style="font-size: 48px; margin-bottom: 40px;">Welcome to the MD Localizer</h1>
+            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px;">In this experiment, you will see sequences of blue squares in a grid.</p>
+            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px;">Your task is to carefully follow the sequences and then identify the correct pattern at the end.</p>
+            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px;">Please remain focused throughout the entire experiment.</p>
+            <p style="font-size: 28px; line-height: 1.5; margin-top: 50px;">Press any key to continue.</p>
         </div>
     `,
     choices: RESPONSE_KEYS,
@@ -740,117 +740,117 @@ var instructions = {
     pages: [
         `
         <div style="max-width: 1000px; margin: 0 auto; padding: 40px;">
-            <h2 style="font-size: 36px; margin-bottom: 30px;">Experimentanweisungen</h2>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">In diesem Experiment sehen Sie Sequenzen von blauen Quadraten, die nacheinander in einem 3×4 Raster erscheinen.</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Jede Sequenz dauert einige Sekunden.</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Nach jeder Sequenz sehen Sie zwei Raster nebeneinander.</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 30px;"><strong>Wählen Sie das Raster aus, das der gezeigten Sequenz entspricht.</strong></p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Das Experiment besteht aus 12 Blöcken mit je ${TRIALS_PER_BLOCK} Aufgaben.</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Zwischen einigen Blöcken gibt es Ruhepausen mit einem Fixationskreuz (+).</p>
+            <h2 style="font-size: 36px; margin-bottom: 30px;">Instructions</h2>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">In this experiment, you will see sequences of blue squares that appear one after another in a 3×4 grid.</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Each sequence lasts a few seconds.</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">After each sequence, you will see two grids side by side.</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 30px;"><strong>Select the grid that matches the sequence you saw.</strong></p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">The experiment consists of 12 blocks, each with ${TRIALS_PER_BLOCK} trials.</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Between some blocks there are rest periods with a fixation cross (+).</p>
         </div>
         `,
         `
         <div style="max-width: 1200px; margin: 0 auto; padding: 30px;">
-            <h2 style="font-size: 36px; margin-bottom: 30px; text-align: center;">Beispiel: Einfache Bedingung (4 Quadrate)</h2>
-            <p style="font-size: 20px; line-height: 1.5; margin-bottom: 25px; text-align: center;">Die blauen Quadrate erscheinen <strong>einzeln nacheinander</strong>:</p>
+            <h2 style="font-size: 36px; margin-bottom: 30px; text-align: center;">Example: Easy Condition (4 squares)</h2>
+            <p style="font-size: 20px; line-height: 1.5; margin-bottom: 25px; text-align: center;">The blue squares appear <strong>one at a time in sequence</strong>:</p>
             
             <div style="display: flex; justify-content: space-around; align-items: center; margin: 30px 0; flex-wrap: wrap;">
                 <div style="text-align: center; margin: 10px;">
-                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Schritt 1</div>
+                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Step 1</div>
                     ${generateGridSVG([[1,0,0,0],[0,0,0,0],[0,0,0,0]], 35)}
                 </div>
                 <div style="text-align: center; margin: 10px;">
-                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Schritt 2</div>
+                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Step 2</div>
                     ${generateGridSVG([[1,0,0,0],[1,0,0,0],[0,0,0,0]], 35)}
                 </div>
                 <div style="text-align: center; margin: 10px;">
-                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Schritt 3</div>
+                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Step 3</div>
                     ${generateGridSVG([[1,0,0,0],[1,0,0,0],[1,0,0,0]], 35)}
                 </div>
                 <div style="text-align: center; margin: 10px;">
-                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Schritt 4</div>
+                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Step 4</div>
                     ${generateGridSVG([[1,0,0,0],[1,0,0,0],[1,1,0,0]], 35)}
                 </div>
             </div>
             
-            <p style="font-size: 20px; line-height: 1.5; margin: 30px 0 20px 0; text-align: center;">Dann wählen Sie das korrekte Muster:</p>
+            <p style="font-size: 20px; line-height: 1.5; margin: 30px 0 20px 0; text-align: center;">Then choose the correct pattern:</p>
             
             <div style="display: flex; justify-content: center; align-items: center; gap: 60px; margin: 20px 0;">
                 <div style="text-align: center;">
-                    <div style="font-size: 20px; margin-bottom: 10px; font-weight: bold; color: #4CAF50;">✓ KORREKT</div>
+                    <div style="font-size: 20px; margin-bottom: 10px; font-weight: bold; color: #4CAF50;">✓ CORRECT</div>
                     ${generateGridSVG([[1,0,0,0],[1,0,0,0],[1,1,0,0]], 45)}
-                    <div style="font-size: 16px; margin-top: 10px; color: #999;">Linke Taste drücken</div>
+                    <div style="font-size: 16px; margin-top: 10px; color: #999;">Press left key</div>
                 </div>
                 <div style="text-align: center;">
-                    <div style="font-size: 20px; margin-bottom: 10px; font-weight: bold; color: #F44336;">✗ FALSCH</div>
+                    <div style="font-size: 20px; margin-bottom: 10px; font-weight: bold; color: #F44336;">✗ INCORRECT</div>
                     ${generateGridSVG([[1,0,0,0],[1,1,0,0],[1,1,0,0]], 45)}
-                    <div style="font-size: 16px; margin-top: 10px; color: #999;">Rechte Taste drücken</div>
+                    <div style="font-size: 16px; margin-top: 10px; color: #999;">Press right key</div>
                 </div>
             </div>
         </div>
         `,
         `
         <div style="max-width: 1200px; margin: 0 auto; padding: 30px;">
-            <h2 style="font-size: 36px; margin-bottom: 30px; text-align: center;">Beispiel: Schwere Bedingung (8 Quadrate)</h2>
-            <p style="font-size: 20px; line-height: 1.5; margin-bottom: 25px; text-align: center;">Die blauen Quadrate erscheinen <strong>paarweise nacheinander</strong>:</p>
+            <h2 style="font-size: 36px; margin-bottom: 30px; text-align: center;">Example: Hard Condition (8 squares)</h2>
+            <p style="font-size: 20px; line-height: 1.5; margin-bottom: 25px; text-align: center;">The blue squares appear <strong>in pairs in sequence</strong>:</p>
             
             <div style="display: flex; justify-content: space-around; align-items: center; margin: 30px 0; flex-wrap: wrap;">
                 <div style="text-align: center; margin: 10px;">
-                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Schritt 1</div>
+                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Step 1</div>
                     ${generateGridSVG([[1,1,0,0],[0,0,0,0],[0,0,0,0]], 35)}
                 </div>
                 <div style="text-align: center; margin: 10px;">
-                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Schritt 2</div>
+                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Step 2</div>
                     ${generateGridSVG([[1,1,1,0],[1,0,0,0],[0,0,0,0]], 35)}
                 </div>
                 <div style="text-align: center; margin: 10px;">
-                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Schritt 3</div>
+                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Step 3</div>
                     ${generateGridSVG([[1,1,1,0],[1,1,1,0],[0,0,0,0]], 35)}
                 </div>
                 <div style="text-align: center; margin: 10px;">
-                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Schritt 4</div>
+                    <div style="font-size: 18px; margin-bottom: 10px; font-weight: bold;">Step 4</div>
                     ${generateGridSVG([[1,1,1,0],[1,1,1,0],[1,1,0,0]], 35)}
                 </div>
             </div>
             
-            <p style="font-size: 20px; line-height: 1.5; margin: 30px 0 20px 0; text-align: center;">Dann wählen Sie das korrekte Muster:</p>
+            <p style="font-size: 20px; line-height: 1.5; margin: 30px 0 20px 0; text-align: center;">Then choose the correct pattern:</p>
             
             <div style="display: flex; justify-content: center; align-items: center; gap: 60px; margin: 20px 0;">
                 <div style="text-align: center;">
-                    <div style="font-size: 20px; margin-bottom: 10px; font-weight: bold; color: #4CAF50;">✓ KORREKT</div>
+                    <div style="font-size: 20px; margin-bottom: 10px; font-weight: bold; color: #4CAF50;">✓ CORRECT</div>
                     ${generateGridSVG([[1,1,1,0],[1,1,1,0],[1,1,0,0]], 45)}
-                    <div style="font-size: 16px; margin-top: 10px; color: #999;">Linke Taste drücken</div>
+                    <div style="font-size: 16px; margin-top: 10px; color: #999;">Press left key</div>
                 </div>
                 <div style="text-align: center;">
-                    <div style="font-size: 20px; margin-bottom: 10px; font-weight: bold; color: #F44336;">✗ FALSCH</div>
+                    <div style="font-size: 20px; margin-bottom: 10px; font-weight: bold; color: #F44336;">✗ INCORRECT</div>
                     ${generateGridSVG([[1,1,1,0],[1,1,1,0],[0,1,1,0]], 45)}
-                    <div style="font-size: 16px; margin-top: 10px; color: #999;">Rechte Taste drücken</div>
+                    <div style="font-size: 16px; margin-top: 10px; color: #999;">Press right key</div>
                 </div>
             </div>
         </div>
         `,
         `
         <div style="max-width: 1000px; margin: 0 auto; padding: 40px;">
-            <h2 style="font-size: 36px; margin-bottom: 30px;">Ihre Aufgabe</h2>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">1. <strong>Verfolgen Sie jede Sequenz aufmerksam</strong> - achten Sie darauf, wo die blauen Quadrate erscheinen</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">2. <strong>Wählen Sie das korrekte Muster</strong> - drücken Sie die linke oder rechte Taste</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">3. <strong>Bleiben Sie ruhig und konzentriert</strong> während des gesamten Experiments</p>
-            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px; color: #2196F3;">Es wird manchmal schnell gehen - geben Sie einfach Ihr Bestes!</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Das gesamte Experiment dauert etwa 15-20 Minuten.</p>
+            <h2 style="font-size: 36px; margin-bottom: 30px;">Your Task</h2>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">1. <strong>Follow each sequence carefully</strong> — pay attention to where the blue squares appear</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">2. <strong>Select the correct pattern</strong> — press the left or right key</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">3. <strong>Stay calm and focused</strong> throughout the experiment</p>
+            <p style="font-size: 28px; line-height: 1.5; margin-bottom: 30px; color: #2196F3;">It will sometimes go quickly — just do your best!</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">The entire experiment takes about 15–20 minutes.</p>
         </div>
         `,
         `
         <div style="max-width: 1000px; margin: 0 auto; padding: 40px;">
-            <h2 style="font-size: 36px; margin-bottom: 30px;">Bereit zum Start</h2>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Nach diesen Anweisungen beginnt das Experiment, sobald der Scanner bereit ist.</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Sie sehen zuerst ein Fixationskreuz (+), dann die Scanner-Trigger, dann die ersten Quadrat-Sequenzen.</p>
-            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Denken Sie daran:</p>
+            <h2 style="font-size: 36px; margin-bottom: 30px;">Ready to Start</h2>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">After these instructions, the experiment will begin as soon as the scanner is ready.</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">You will first see a fixation cross (+), then the scanner triggers, then the first square sequences.</p>
+            <p style="font-size: 24px; line-height: 1.5; margin-bottom: 20px;">Remember:</p>
             <ul style="font-size: 24px; line-height: 1.5; text-align: left; margin-bottom: 30px;">
-                <li>Ruhig bleiben und konzentriert sein</li>
-                <li>Jede Quadrat-Sequenz verfolgen</li>
-                <li>Linke oder rechte Taste für Ihre Antwort drücken</li>
+                <li>Stay calm and focused</li>
+                <li>Track each square sequence</li>
+                <li>Press the left or right key for your answer</li>
             </ul>
-            <p style="font-size: 28px; line-height: 1.5; margin-top: 30px; color: #4CAF50;"><strong>Drücken Sie eine beliebige Taste, wenn Sie bereit sind!</strong></p>
+            <p style="font-size: 28px; line-height: 1.5; margin-top: 30px; color: #4CAF50;"><strong>Press any key when you are ready!</strong></p>
         </div>
         `
     ],
@@ -866,11 +866,11 @@ var experimentEndInstructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
         <div style="max-width: 1000px; margin: 0 auto; padding: 40px; text-align: center;">
-            <h2 style="font-size: 42px; margin-bottom: 40px;">Experiment beendet</h2>
-            <p style="font-size: 32px; line-height: 1.5; margin-bottom: 30px;">Sie haben den MD Localizer erfolgreich abgeschlossen!</p>
-            <p style="font-size: 32px; line-height: 1.5; margin-bottom: 30px; color: #4CAF50;"><strong>Vielen Dank für Ihre Teilnahme!</strong></p>
-            <p style="font-size: 32px; line-height: 1.5; margin-bottom: 30px;">Bitte bleiben Sie ruhig liegen, bis der Versuchsleiter zu Ihnen kommt.</p>
-            <p style="font-size: 32px; line-height: 1.5; margin-top: 50px;">Drücken Sie eine beliebige Taste zum Beenden.</p>
+            <h2 style="font-size: 42px; margin-bottom: 40px;">Experiment complete</h2>
+            <p style="font-size: 32px; line-height: 1.5; margin-bottom: 30px;">You have successfully completed the MD Localizer!</p>
+            <p style="font-size: 32px; line-height: 1.5; margin-bottom: 30px; color: #4CAF50;"><strong>Thank you for your participation!</strong></p>
+            <p style="font-size: 32px; line-height: 1.5; margin-bottom: 30px;">Please remain still until the experimenter comes to you.</p>
+            <p style="font-size: 32px; line-height: 1.5; margin-top: 50px;">Press any key to end.</p>
         </div>
     `,
     choices: RESPONSE_KEYS,
@@ -1064,23 +1064,23 @@ function initializeExperiment() {
         type: jsPsychSurveyHtmlForm,
         html: `
             <div style="max-width: 600px; margin: 0 auto; color: white;">
-                <h2 style="text-align: center;">MD Localizer - Räumliches Arbeitsgedächtnis</h2>
-                <p style="text-align: center;">Bitte geben Sie Ihre Teilnehmer-ID ein:</p>
+                <h2 style="text-align: center;">MD Localizer - Spatial Working Memory</h2>
+                <p style="text-align: center;">Please enter your participant ID:</p>
                 <div style="margin: 20px 0;">
-                    <label for="participant_id" style="display: block; margin-bottom: 5px;">Teilnehmer-ID:</label>
+                    <label for="participant_id" style="display: block; margin-bottom: 5px;">Participant ID:</label>
                     <input type="text" id="participant_id" name="participant_id" required style="width: 100%; padding: 8px; font-size: 16px; color: black; background: white;">
                 </div>
                 <div style="margin: 20px 0;">
-                    <label for="order" style="display: block; margin-bottom: 5px;">Durchgang (1 oder 2):</label>
+                    <label for="order" style="display: block; margin-bottom: 5px;">Run (1 or 2):</label>
                     <select id="order" name="order" required style="width: 100%; padding: 8px; font-size: 16px; color: black; background: white;">
-                        <option value="">Durchgang wählen</option>
-                        <option value="1">Durchgang 1</option>
-                        <option value="2">Durchgang 2</option>
+                        <option value="">Select run</option>
+                        <option value="1">Run 1</option>
+                        <option value="2">Run 2</option>
                     </select>
                 </div>
             </div>
         `,
-        button_label: 'Weiter',
+        button_label: 'Continue',
         on_load: function() {
             // Auto-focus on the first input field
             setTimeout(function() {
