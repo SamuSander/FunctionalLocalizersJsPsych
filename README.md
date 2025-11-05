@@ -2,7 +2,7 @@
 
 Browser-based (jsPsych) implementations of two widely used fMRI localizers:
 
-* **Speeded Language Localizer (reading-based)** – a ~3.5‑minute task that robustly identifies the language network (Sentences > Nonwords), adapted from materials by Tuckute, Scott, Sathe, and Fedorenko.
+* **Speeded Language Localizer (reading-based)** – a ~3.5‑minute task that robustly identifies the language network (Sentences > Nonwords), adapted from materials by Tuckute, Lee, Sathe, and Fedorenko.
 * **Multiple-Demand (MD) Network Localizer** – a spatial working‑memory task with easy vs. hard conditions that identifies the domain‑general MD system.
 
 This repository includes runnable HTML files, JavaScript code, and short demo videos for each task.
@@ -73,7 +73,7 @@ FunctionalLocalizersJsPsych/
 * **Conditions:** **Sentences (S)** vs **Nonwords (N)** (**S > N** contrast).
 * **What you’ll see:** rapid sequences of words or pronounceable nonwords, followed by a brief button‑press prompt.
 
-> **Attribution:** Adapted from the MATLAB/PTB localizer by Tuckute, Scott, Sathe, and Fedorenko (see references). Original MATLAB repo linked below.
+> **Attribution:** Adapted from the MATLAB/PTB localizer by Tuckute, Lee, Sathe, and Fedorenko (see references). Original MATLAB repo linked below.
 
 ### 2) Multiple‑Demand (MD) Network Localizer (spatial working memory)
 
@@ -124,7 +124,7 @@ FunctionalLocalizersJsPsych/
 ### Credits
 
 * **jsPsych** for the experiment framework and plugins: [https://www.jspsych.org/](https://www.jspsych.org/)
-* **Original MATLAB speeded localizer** by Greta Tuckute, Terri Scott, Aalok Sathe, Evelina Fedorenko, and collaborators.
+* **Original MATLAB speeded localizer** by Greta Tuckute, Elizabeth Jiachen Lee, Aalok Sathe, Evelina Fedorenko, and collaborators.
 * **This repo:** JavaScript/jsPsych ports + small UX helpers for scanner workflows.
 
 > If you use these tasks, please cite the relevant papers and acknowledge the original authors.
@@ -135,7 +135,7 @@ FunctionalLocalizersJsPsych/
 
 ### Language localizer (reading‑based)
 
-* Tuckute, G., Scott, T. L., Sathe, A., & Fedorenko, E. (2024). *A 3.5‑minute‑long reading‑based fMRI localizer for the language network.* bioRxiv. [https://doi.org/10.1101/2024.07.02.601683](https://doi.org/10.1101/2024.07.02.601683)
+* Tuckute, G., Lee, E. J., Sathe, A., & Fedorenko, E. (2024). *A 3.5‑minute‑long reading‑based fMRI localizer for the language network.* bioRxiv. [https://doi.org/10.1101/2024.07.02.601683](https://doi.org/10.1101/2024.07.02.601683)
 * Fedorenko, E., Behr, M. K., & Kanwisher, N. (2011). *Functional specificity for high‑level linguistic processing in the human brain.* **PNAS**, 108(39), 16428–16433. [https://doi.org/10.1073/pnas.1112937108](https://doi.org/10.1073/pnas.1112937108)
 * Fedorenko, E., Hsieh, P.‑J., Nieto‑Castañón, A., Whitfield‑Gabrieli, S., & Kanwisher, N. (2010). *New method for fMRI investigations of language.* **Journal of Neurophysiology**, 104(2), 1177–1194. [https://doi.org/10.1152/jn.00032.2010](https://doi.org/10.1152/jn.00032.2010)
 
